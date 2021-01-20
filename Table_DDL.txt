@@ -1,0 +1,24 @@
+create table pet(
+	pet_id serial primary key,
+	pet_name varchar(30) not null,
+	owner_id int,
+	sitter_id int,
+	foreign key (owner_id) references petOwner(owner_id),
+	foreign key (sitter_id) references sitter(sitter_id)
+);
+
+create table petOwner(
+	owner_id serial primary key,
+	first_name varchar(30) not null,
+	last_name varchar(30) not null,
+	telephone_number varchar(30) not null,
+	email varchar(70)
+	
+);
+
+create table sitter(
+	sitter_id serial primary key,
+	first_name varchar(30) not null,
+	last_name varchar(30) not null
+);
+
