@@ -14,11 +14,11 @@ object MyConnection
         if(myConn == null || myConn.isClosed())
         {
             classOf[org.postgresql.Driver].newInstance()
-            myConn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/fsenorine", "fsenorine", "734Fox_*")
+            myConn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "", "")
         }
         else
         {
-            myConn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/fsenorine", "fsenorine", "734Fox_*")
+            myConn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "", "")
         }
 
         return myConn
